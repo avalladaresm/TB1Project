@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'development_orders/index'
+  get 'development_orders/show'
+  get 'development_orders/new'
+  get 'development_orders/edit'
   get 'welcome/index'
   get 'clients/index'
   get 'clients/show'
@@ -8,4 +12,5 @@ Rails.application.routes.draw do
   root :to => 'welcome#index'
 
   resources :clients
+  resources :development_orders
 end
