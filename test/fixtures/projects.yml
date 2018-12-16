@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  NAME_PROJECT: MyString
+  LOCATION_PROJECT: MyString
+  TYPE_PROJECT: MyString
+  GITHUB_PROJECT: MyString
+  TRELLO_PROJECT: MyString
+  DATEREQ_PROJECT: 2018-12-16 03:56:54
+  STARTDATE_PROJECT: 2018-12-16
+  ENDDATE_PROJECT: 2018-12-16
+  STATE_PROJECT: MyString
+  development_order: one
+  project_team: one
+
+two:
+  NAME_PROJECT: MyString
+  LOCATION_PROJECT: MyString
+  TYPE_PROJECT: MyString
+  GITHUB_PROJECT: MyString
+  TRELLO_PROJECT: MyString
+  DATEREQ_PROJECT: 2018-12-16 03:56:54
+  STARTDATE_PROJECT: 2018-12-16
+  ENDDATE_PROJECT: 2018-12-16
+  STATE_PROJECT: MyString
+  development_order: two
+  project_team: two

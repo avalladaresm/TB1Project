@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  PROJECTNAME_DEVORDER: MyString
+  TECHS_DEVORDER: MyString
+  client: one
+
+two:
+  PROJECTNAME_DEVORDER: MyString
+  TECHS_DEVORDER: MyString
+  client: two

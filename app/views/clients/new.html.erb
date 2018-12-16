@@ -1,0 +1,36 @@
+<h1>Nuevo Cliente</h1>
+<%= form_for @client do |f| %>
+    <div>
+        <%= f.label :NAME_CLIENT%>
+        <%= f.text_field :NAME_CLIENT%>
+    </div>
+
+    <div>
+        <%= f.label :TELEPHONE_CLIENT%>
+        <%= f.text_field :TELEPHONE_CLIENT%>
+    </div>
+    
+    <div>
+        <%= f.label :WEBSITE_CLIENT%>
+        <%= f.text_field :WEBSITE_CLIENT%>
+    </div>
+
+    <div>
+        <%= f.label :EMAIL_CLIENT%>
+        <%= f.text_field :EMAIL_CLIENT%>
+    </div>
+
+    <div>
+        <%= f.label :COUNTRY_CLIENT%>
+        <%= f.text_field :COUNTRY_CLIENT%>
+    </div>
+
+    <div>
+        <%= f.label :ADDRESS_CLIENT%>
+        <%= f.text_field :ADDRESS_CLIENT%>
+    </div>
+
+    <div>
+        <%= f.submit %>
+    </div>
+<% end %>

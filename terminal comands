@@ -1,0 +1,47 @@
+rails g model Client ID_CLIENT:primary_key NAME_CLIENT:string TELEPHONE_CLIENT:integer WEBSITE_CLIENT:string EMAIL_CLIENT:string COUNTRY_CLIENT:string ADDRESS_CLIENT:string
+
+id_client
+name_client
+telephone_client
+website_client
+email_client
+country_client
+address_client
+
+--OVERRIDE DEFAULT RAILS ID GENERATOR
+create_table :employees, :primary_key => :emp_id do |t|
+  t.string :first_name
+  t.string :last_name
+end
+change_column :employees, :emp_id, :string
+
+Client.create(NAME_CLIENT: "Alejandro Valladares", TELEPHONE_CLIENT: 31717676, WEBSITE_CLIENT: "avalladaresm.me", EMAIL_CLIENT: "alejo.valladares14@gmail.com", COUNTRY_CLIENT: "Honduras", ADDRESS_CLIENT: "El Progreso")
+Client.create(NAME_CLIENT: "Daniel Medina", TELEPHONE_CLIENT: 31243514, WEBSITE_CLIENT: "daniel.me", EMAIL_CLIENT: "danielmedina@gmail.com", COUNTRY_CLIENT: "Honduras", ADDRESS_CLIENT: "San Pedro Sula")
+Client.create(NAME_CLIENT: "Juan Zepeda", TELEPHONE_CLIENT: 93452353, WEBSITE_CLIENT: "juanz.me", EMAIL_CLIENT: "Juanzepeda@gmail.com", COUNTRY_CLIENT: "Honduras", ADDRESS_CLIENT: "Villanueva")
+
+rails g model DevelopmentOrder PROJECTNAME_DEVORDER:string TECHS_DEVORDER:string client:references
+
+rails c
+Client.find(1)
+client.development_orders
+client.development_orders.create(PROJECTNAME_DEVORDER: "Gestion de inventario", TECHS_DEVORDER: "Ruby on Rails")
+
+client.development_orders.create(PROJECTNAME_DEVORDER: "Gestion de inventario", TECHS_DEVORDER: "Ruby on Rails")
+client.development_orders.create(PROJECTNAME_DEVORDER: "Gestion de vacaciones de empleados", TECHS_DEVORDER: "JavaScript")
+client.development_orders.create(PROJECTNAME_DEVORDER: "Control de asignacion de proyectos", TECHS_DEVORDER: "C#")
+client.development_orders.create(PROJECTNAME_DEVORDER: "Gestion de base de datos", TECHS_DEVORDER: "ASP.NET")
+
+
+
+rails g model Project NAME_PROJECT:string LOCATION_PROJECT:string TYPE_PROJECT:string GITHUB_PROJECT:string TRELLO_PROJECT:string DATEREQ_PROJECT:datetime STARTDATE_PROJECT:date ENDDATE_PROJECT:date STATE_PROJECT:string development_order:references project_team:references
+
+Project NAME_PROJECT:string LOCATION_PROJECT:string TYPE_PROJECT:string GITHUB_PROJECT:string TRELLO_PROJECT:string DATEREQ_PROJECT:datetime STARTDATE_PROJECT:date ENDDATE_PROJECT:date STATE_PROJECT:string development_order:references project_team:references
+
+development_order.project.create(NAME_PROJECT: "Gestion de inventario", LOCATION_PROJECT: "SPS", TYPE_PROJECT: "External", GITHUB_PROJECT: "github.com", TRELLO_PROJECT: "trello.com", DATEREQ_PROJECT: Time.parse("8:47am Dec 7th, 2015").utc, STARTDATE_PROJECT: Date.today, ENDDATE_PROJECT: Date.tomorrow, STATE_PROJECT: "On track", development_order_id: 1, project_team_id: 1)
+
+
+
+
+
+rails g model ProjectTeam NAME_PROJECTTEAM:string
+rake db:migrate
