@@ -1,7 +1,7 @@
 class DevelopmentOrdersController < ApplicationController
   
   def index
-    @development_orders = DevelopmentOrder.order(:id)
+    @development_orders = DevelopmentOrder.includes(:client).order(:id)
   end
 
   def show

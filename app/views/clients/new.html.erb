@@ -1,36 +1,39 @@
-<h1>Nuevo Cliente</h1>
-<%= form_for @client do |f| %>
-    <div>
-        <%= f.label :NAME_CLIENT%>
-        <%= f.text_field :NAME_CLIENT%>
-    </div>
+<div class="container"> 
+    <h1>Nuevo Cliente</h1>
 
-    <div>
-        <%= f.label :TELEPHONE_CLIENT%>
-        <%= f.text_field :TELEPHONE_CLIENT%>
-    </div>
-    
-    <div>
-        <%= f.label :WEBSITE_CLIENT%>
-        <%= f.text_field :WEBSITE_CLIENT%>
-    </div>
+    <%= form_for @client do |f| %>
+        <div>
+            <%= f.label :NAME_CLIENT, "Nombre" %>
+            <%= f.text_field :NAME_CLIENT, class: 'form-control', placeholder: 'Ingrese su nombre'%>
+        </div>
 
-    <div>
-        <%= f.label :EMAIL_CLIENT%>
-        <%= f.text_field :EMAIL_CLIENT%>
-    </div>
+        <div>
+            <%= f.label :TELEPHONE_CLIENT, "Numero telefonico" %>
+            <%= f.text_field :TELEPHONE_CLIENT, class: 'form-control', placeholder: 'Ingrese su telefono'%>
+        </div>
+        
+        <div>
+            <%= f.label :WEBSITE_CLIENT, "Website" %>
+            <%= f.text_field :WEBSITE_CLIENT, class: 'form-control', placeholder: 'Ingrese su sitio web'%>
+        </div>
 
-    <div>
-        <%= f.label :COUNTRY_CLIENT%>
-        <%= f.text_field :COUNTRY_CLIENT%>
-    </div>
+        <div>
+            <%= f.label :EMAIL_CLIENT, "Correo electronico" %>
+            <%= f.text_field :EMAIL_CLIENT, class: 'form-control', placeholder: 'Ingrese su email'%>
+        </div>
 
-    <div>
-        <%= f.label :ADDRESS_CLIENT%>
-        <%= f.text_field :ADDRESS_CLIENT%>
-    </div>
+        <div>
+            <%= f.label :COUNTRY_CLIENT, "Pais" %>
+            <%= f.text_field :COUNTRY_CLIENT, class: 'form-control', placeholder: 'Ingrese su pais'%>
+        </div>
 
-    <div>
-        <%= f.submit %>
-    </div>
-<% end %>
+        <div>
+            <%= f.label :ADDRESS_CLIENT, "Direccion" %>
+            <%= f.text_field :ADDRESS_CLIENT, class: 'form-control', placeholder: 'Ingrese su direccion'%>
+        </div>
+
+        <div>
+            <%= f.submit :Submit, class: 'btn btn-success' %>
+        </div>
+    <% end %>
+</div>

@@ -1,35 +1,37 @@
-<h1>Clients</h1>
-<% if Client.any?%>
-    <h2>Listado</h2>
-    <table border="1">
-    
-        <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Telefono</th>
-            <th>Website</th>
-            <th>Email</th>
-            <th>Country</th>
-            <th>Address</th>
-            <th>Devors</th>            
-        </tr>
-        <% @clients.each do |client| %>
+<div class="container">
+    <h1>Clients</h1>
+    <% if Client.any?%>
+        <h2>Listado</h2>
+        <table class="table table-striped", border="1">
+        
             <tr>
-                <td><%= link_to client.id, client %></td>
-                <td><%= client.NAME_CLIENT %></td>
-                <td><%= client.TELEPHONE_CLIENT %></td>
-                <td><%= client.WEBSITE_CLIENT %></td>
-                <td><%= client.EMAIL_CLIENT %></td>
-                <td><%= client.COUNTRY_CLIENT %></td>
-                <td><%= client.ADDRESS_CLIENT %></td>
-                <td><%= client.development_orders.count %></td>
-            <tr>
-        <% end %>
-    </table>
-<% else %>
-<em>No hay ningun cliente en la tabla</em>
-<% end %>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Telefono</th>
+                <th>Website</th>
+                <th>Email</th>
+                <th>Country</th>
+                <th>Address</th>
+                <th>Devors</th>            
+            </tr>
+            <% @clients.each do |client| %>
+                <tr>
+                    <td><%= link_to client.id, client %></td>
+                    <td><%= client.NAME_CLIENT %></td>
+                    <td><%= client.TELEPHONE_CLIENT %></td>
+                    <td><%= client.WEBSITE_CLIENT %></td>
+                    <td><%= client.EMAIL_CLIENT %></td>
+                    <td><%= client.COUNTRY_CLIENT %></td>
+                    <td><%= client.ADDRESS_CLIENT %></td>
+                    <td><%= client.development_orders.count %></td>
+                <tr>
+            <% end %>
+        </table>
+    <% else %>
+    <em>No hay ningun cliente en la tabla</em>
+    <% end %>
 
-<p>
-<%= link_to "Nuevo Cliente", new_client_path %>
-</p>
+    <p>
+        <%= link_to "Nuevo Cliente", new_client_path, class: 'btn btn-primary' %>
+    </p>
+</div>

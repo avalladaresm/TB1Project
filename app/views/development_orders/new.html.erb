@@ -1,22 +1,24 @@
-<h1>Nueva Development Order</h1>
+<div class="container"> 
+    <h1>Nueva Development Order</h1>
 
-<%= form_for @development_order do |f| %>
-    <div>
-        <%= f.label :client_id, "Cliente ID"%>
-        <%= f.select :client_id, Client.pluck(:NAME_CLIENT, :id) %>
-    </div>
+    <%= form_for @development_order do |f| %>
+        <div>
+            <%= f.label :client_id, "Cliente ID"%>
+            <%= f.select :client_id, Client.pluck(:NAME_CLIENT, :id) %>
+        </div>
 
-    <div>
-        <%= f.label :PROJECTNAME_DEVORDER %>
-        <%= f.text_field :PROJECTNAME_DEVORDER %>
-    </div>
-    
-    <div>
-        <%= f.label :TECHS_DEVORDER %>
-        <%= f.text_field :TECHS_DEVORDER %>
-    </div>
+        <div>
+            <%= f.label :PROJECTNAME_DEVORDER, "Nombre del Proyecto" %>
+            <%= f.text_field :PROJECTNAME_DEVORDER, class: 'form-control', placeholder: 'Ingrese el nombre del proyecto' %>
+        </div>
+        
+        <div>
+            <%= f.label :TECHS_DEVORDER, "Tecnologia a usar" %>
+            <%= f.text_field :TECHS_DEVORDER, class: 'form-control', placeholder: 'Ingrese la tecnologia a usar' %>
+        </div>
 
-    <div>
-        <%= f.submit %>
-    </div>
-<% end %>
+        <div>
+            <%= f.submit :Submit, class: 'btn btn-success' %>
+        </div>
+    <% end %>
+</div>

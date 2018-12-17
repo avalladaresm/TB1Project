@@ -1,26 +1,27 @@
-<h1><%= @client.NAME_CLIENT %></h1>
+<div class="container">
+    <h1><%= @client.NAME_CLIENT %></h1>
 
-<p>
-    <strong>Telefono: </strong>
-    <%= @client.TELEPHONE_CLIENT %>
-    <br>
+    <p>
+        <strong>Telefono: </strong>
+        <%= @client.TELEPHONE_CLIENT %>
+        <br>
 
-    <strong>Website: </strong>
-    <%= @client.WEBSITE_CLIENT %>
-    <br>
+        <strong>Website: </strong>
+        <%= @client.WEBSITE_CLIENT %>
+        <br>
 
-    <strong>Email: </strong>
-    <%= @client.EMAIL_CLIENT %>
-    <br>
+        <strong>Email: </strong>
+        <%= @client.EMAIL_CLIENT %>
+        <br>
 
-    <strong>Pais: </strong>
-    <%= @client.COUNTRY_CLIENT %>
-    <br>
+        <strong>Pais: </strong>
+        <%= @client.COUNTRY_CLIENT %>
+        <br>
 
-    <strong>Direccion: </strong>
-    <%= @client.ADDRESS_CLIENT %>
-    <br>
-</p>
+        <strong>Direccion: </strong>
+        <%= @client.ADDRESS_CLIENT %>
+        <br>
+    </p>
 
-<%= link_to "Clientes", clients_path %>
-<%= link_to "Editar", edit_client_path(@client) %>
+    <%= link_to "Editar", edit_client_path(@client), class: 'btn btn-primary' %>
+</div>

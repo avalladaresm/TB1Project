@@ -1,18 +1,20 @@
-<h1>Development Order #<%= @development_order.id %></h1>
+<div class="container">
+    <h1>Development Order #<%= @development_order.id %></h1>
 
-<p>
-    <strong>Cliente</strong>
-    <%= @development_order.client.NAME_CLIENT %>
-</p>
+    <p>
+        <strong>Cliente</strong>
+        <%= @development_order.client.NAME_CLIENT %>
+    </p>
 
-<p>
-    <strong>Nombre Proyecto</strong>
-    <%= @development_order.PROJECTNAME_DEVORDER %>
-</p>
+    <p>
+        <strong>Nombre Proyecto</strong>
+        <%= @development_order.PROJECTNAME_DEVORDER %>
+    </p>
 
-<p>
-    <strong>Tecnologia a usar</strong>
-    <%= @development_order.TECHS_DEVORDER %>
-</p>
+    <p>
+        <strong>Tecnologia a usar</strong>
+        <%= @development_order.TECHS_DEVORDER %>
+    </p>
 
-<%= link_to "Develpment Orders", development_orders_path %>
+    <%= link_to "Develpment Orders", development_orders_path, class: 'btn btn-primary' %>
+</div>

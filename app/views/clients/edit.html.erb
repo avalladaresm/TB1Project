@@ -1,41 +1,41 @@
-<h1>Editar Cliente</h1>
+<div class="container">
+    <h1>Editar Cliente</h1>
 
-<%= form_for @client do |f| %>
-    <div>
-        <%= f.label :NAME_CLIENT%>
-        <%= f.text_field :NAME_CLIENT%>
-    </div>
+    <%= form_for @client do |f| %>
+        <div>
+            <%= f.label :NAME_CLIENT%>
+            <%= f.text_field :NAME_CLIENT%>
+        </div>
 
-    <div>
-        <%= f.label :TELEPHONE_CLIENT%>
-        <%= f.text_field :TELEPHONE_CLIENT%>
-    </div>
-    
-    <div>
-        <%= f.label :WEBSITE_CLIENT%>
-        <%= f.text_field :WEBSITE_CLIENT%>
-    </div>
+        <div>
+            <%= f.label :TELEPHONE_CLIENT%>
+            <%= f.text_field :TELEPHONE_CLIENT%>
+        </div>
+        
+        <div>
+            <%= f.label :WEBSITE_CLIENT%>
+            <%= f.text_field :WEBSITE_CLIENT%>
+        </div>
 
-    <div>
-        <%= f.label :EMAIL_CLIENT%>
-        <%= f.text_field :EMAIL_CLIENT%>
-    </div>
+        <div>
+            <%= f.label :EMAIL_CLIENT%>
+            <%= f.text_field :EMAIL_CLIENT%>
+        </div>
 
-    <div>
-        <%= f.label :COUNTRY_CLIENT%>
-        <%= f.text_field :COUNTRY_CLIENT%>
-    </div>
+        <div>
+            <%= f.label :COUNTRY_CLIENT%>
+            <%= f.text_field :COUNTRY_CLIENT%>
+        </div>
 
-    <div>
-        <%= f.label :ADDRESS_CLIENT%>
-        <%= f.text_field :ADDRESS_CLIENT%>
-    </div>
+        <div>
+            <%= f.label :ADDRESS_CLIENT%>
+            <%= f.text_field :ADDRESS_CLIENT%>
+        </div>
 
-    <div>
-        <%= f.submit %>
-    </div>
-<% end %>
+        <p>
+            <%= f.submit :Submit, class: 'btn btn-success'%>
+            <%= link_to "Borrar", @client, method: :delete, data: {confirm: "Seguro?"}, class: 'btn btn-danger' %>
+        </p>
 
-<p>
-<%= link_to "Borrar", @client, method: :delete, data: {confirm: "Seguro?"} %>
-</p>
+    <% end %>
+</div>

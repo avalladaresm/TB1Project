@@ -1,27 +1,28 @@
-<h1>Development Orders</h1>
+<div class="container">
 
-<% if DevelopmentOrder.any?%>
-    <h2>Listado</h2>
-    <table border="1">
-    
-        <tr>
-            <th>ID</th>
-            <th>Nombre Proyecto</th>
-            <th>Tecnologia a usar</th>
-        </tr>
+    <h1>Ordenes de Desarrollo</h1>
 
-        <% @development_orders.each do |development_order| %>
+    <% if DevelopmentOrder.any?%>
+        <h2>Listado</h2>
+        <table class="table table-striped", border="1">
             <tr>
-                <td><%= link_to development_order.id, development_order %></td>
-                <td><%= development_order.PROJECTNAME_DEVORDER %></td>
-                <td><%= development_order.TECHS_DEVORDER %></td>
+                <th>ID</th>
+                <th>Nombre Proyecto</th>
+                <th>Tecnologia a usar</th>
+            </tr>
+            <% @development_orders.each do |development_order| %>
             <tr>
-        <% end %>
-    </table>
-<% else %>
-<em>No hay ninguna orden de desarrollo en la tabla</em>
-<% end %>
+                <td width="10%"><%= link_to development_order.id, development_order %></td>
+                <td width="10%" ><%= development_order.PROJECTNAME_DEVORDER %></td>
+                <td width="10%"><%= development_order.TECHS_DEVORDER %></td>
+            <tr>
+            <% end %>
+        </table>
+    <% else %>
+    <em>No hay ninguna orden de desarrollo en la tabla</em>
+    <% end %>
 
-<p>
-<%= link_to "Nueva Order de Desarrollo", new_development_order_path %>
-</p>
+    <p>
+        <%= link_to "Nueva Orden de Desarrollo", new_development_order_path, class: 'btn btn-primary' %>
+    </p>
+</div>
