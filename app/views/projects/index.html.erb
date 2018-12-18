@@ -7,29 +7,29 @@
         <table class="table table-striped", border="1">
             <tr>
                 <th>ID</th>
-                <th>Nombre proyecto</th>
-                <th>Pais proyecto</th>
-                <th>Tipo proyecto</th>
-                <th>GitHub proyecto</th>
-                <th>Trello proyecto</th>
+                <th>Nombre</th>
+                <th>Pais</th>
+                <th>Tipo</th>
+                <th>GitHub</th>
+                <th>Trello</th>
                 <th>Fecha de solicitud</th>
                 <th>Fecha de inicio</th>
                 <th>Fecha de finalizacion</th>
-                <th>Estado del proyecto</th>
+                <th>Estado</th>
             </tr>
             <% @projects.each do |project| %>
-            <tr>
-                <td width="10%"><%= link_to project.id, project %></td>
-                <td width="10%" ><%= project.NAME_PROJECT %></td>
-                <td width="10%"><%= project.LOCATION_PROJECT %></td>
-                <td width="10%" ><%= project.TYPE_PROJECT %></td>
-                <td width="10%"><%= project.GITHUB_PROJECT %></td>
-                <td width="10%" ><%= project.TRELLO_PROJECT %></td>
-                <td width="10%"><%= project.DATEREQ_PROJECT %></td>
-                <td width="10%" ><%= project.STARTDATE_PROJECT %></td>
-                <td width="10%"><%= project.ENDDATE_PROJECT %></td>
-                <td width="10%"><%= project.STATE_PROJECT %></td>
-            <tr>
+                <tr>
+                    <td><%= link_to project.id, project %></td>
+                    <td><%= project.NAME_PROJECT %></td>
+                    <td><%= project.LOCATION_PROJECT %></td>
+                    <td><%= project.TYPE_PROJECT %></td>
+                    <td><%= project.GITHUB_PROJECT %></td>
+                    <td><%= project.TRELLO_PROJECT %></td>
+                    <td><%= project.DATEREQ_PROJECT %></td>
+                    <td><%= project.STARTDATE_PROJECT %></td>
+                    <td><%= project.ENDDATE_PROJECT %></td>
+                    <td><%= project.STATE_PROJECT %></td>
+                <tr>
             <% end %>
         </table>
     <% else %>
@@ -37,6 +37,6 @@
     <% end %>
 
     <p>
-        <%= link_to "Proyectos", projects_path, class: 'btn btn-primary' %>
+        <%= link_to "Proyectos", projects_path, class: 'btn btn-primary' %>-->
     </p>
 </div>

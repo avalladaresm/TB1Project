@@ -3,7 +3,7 @@
     
     <%= form_for @project do |f| %>
         <div>
-            <%= f.label :development_order_id, "Nombre Projecto" %>
+            <%= f.label :development_order_id, "Nombre Proyecto" %>
             <%= f.select :development_order_id, DevelopmentOrder.pluck(:PROJECTNAME_DEVORDER, :id) %>
         </div>
         
