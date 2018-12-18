@@ -1,6 +1,8 @@
 class ClientsController < ApplicationController
   before_action :get_client, only: [:show, :edit, :destroy, :update]
 
+  http_basic_authenticate_with name: "messi", password: "holaa", expect: :index
+
   def index
     @clients = Client.order(:id)
   end

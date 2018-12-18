@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+  get 'sessions/create'
+  get 'sessions/destroy'
+  get 'users/new'
+  get 'users/create'
+  get 'users/show'
   get 'development_orders/index'
   get 'development_orders/show'
   get 'development_orders/new'
@@ -13,4 +19,11 @@ Rails.application.routes.draw do
 
   resources :clients
   resources :development_orders
+  resources :users, only: [:new, :create]
+  get "/account" => "users#show"
+
+  get "/login" => "sessions#new"
+  post "/login" => "sessions#create"
+  delete "/logout" => "sessions#destroy"
+
 end
