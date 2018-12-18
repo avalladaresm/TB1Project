@@ -1,5 +1,5 @@
 class DevelopmentOrdersController < ApplicationController
-  
+
   def index
     @development_orders = DevelopmentOrder.includes(:client).order(:id)
   end
@@ -22,10 +22,17 @@ class DevelopmentOrdersController < ApplicationController
     end
   end
 
+  def destroy
+    DevelopmentOrder.find(params[:id]).destroy
+    redirect_to development_orders_path
+  end
+
   def edit
   end
 
   private
+
+
   def development_order_params
     params.require(:development_order).permit!
   end

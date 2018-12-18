@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'projects/index'
+  get 'projects/show'
+  get 'projects/new'
+  get 'projects/edit'
   get 'sessions/new'
   get 'sessions/create'
   get 'sessions/destroy'
@@ -19,6 +23,7 @@ Rails.application.routes.draw do
 
   resources :clients
   resources :development_orders
+  resources :projects
   resources :users, only: [:new, :create]
   get "/account" => "users#show"
 

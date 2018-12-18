@@ -17,4 +17,6 @@
     </p>
 
     <%= link_to "Develpment Orders", development_orders_path, class: 'btn btn-primary' %>
+    <%= link_to "Borrar", @development_order, method: :delete, data: {confirm: "Seguro?"}, class: 'btn btn-danger' %>
+
 </div>

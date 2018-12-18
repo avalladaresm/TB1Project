@@ -6,8 +6,6 @@ class SessionsController < ApplicationController
   def new
     if current_user.present?
       redirect_to clients_path
-    else
-      @user = User.new
     end
   end
 

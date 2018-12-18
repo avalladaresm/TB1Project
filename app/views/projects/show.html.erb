@@ -1,0 +1,35 @@
+<div class="container"> 
+    <h1><%= @project.NAMEPROJECT %></h1>
+    
+    <p>
+        <strong>Pais proyecto: </strong>
+        <%= @project.LOCATION_PROJECT %>
+        <br>
+        
+        <strong>GitHub proyecto: </strong>
+        <%= @project.GITHUB_PROJECT %>
+        <br>
+
+        <strong>Trello proyecto: </strong>
+        <%= @project.TRELLO_PROJECT %>
+        <br>
+
+        <strong>Fecha de solicitud: </strong>
+        <%= @project.DATEREQ_PROJECT %>
+        <br>
+
+        <strong>Fecha de inicio: </strong>
+        <%= @project.STARTDATE_PROJECT %>
+        <br>
+
+        <strong>Fecha de finalizacion: </strong>
+        <%= @project.ENDDATE_PROJECT %>
+        <br>
+        
+        <strong>Estado del proyecto: </strong>
+        <%= @project.STATE_PROJECT %>
+        <br>
+
+    </p>
+
+    <%= link_to "Editar", edit_project_path(@project), class: 'btn btn-primary' %>

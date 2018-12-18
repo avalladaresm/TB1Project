@@ -1,0 +1,55 @@
+<div class="container">
+    <h1>Editar Proyecto</h1>
+
+    <%= form_for @project do |f| %>
+        <div>
+            <%= f.label :LOCATION_PROJECT%>
+            <%= @project.LOCATION_PROJECT %>
+        </div>
+
+        <div>
+            <%= f.label :TYPE_PROJECT%>
+            <%= @project.TYPE_PROJECT %>
+        </div>
+
+        <div>
+            <%= f.label :TELEPHONE_CLIENT%>
+            <%= f.text_field :TELEPHONE_CLIENT%>
+        </div>
+        
+        <div>
+            <%= f.label :GITHUB_PROJECT%>
+            <%= f.text_field :GITHUB_PROJECT%>
+        </div>
+
+        <div>
+            <%= f.label :TRELLO_PROJECT%>
+            <%= f.text_field :TRELLO_PROJECT%>
+        </div>
+
+        <div>
+            <%= f.label :DATEREQ_PROJECT%>
+            <%= @project.DATEREQ_PROJECT %>
+        </div>
+
+        <div>
+            <%= f.label :STARTDATE_PROJECT%>
+            <%= @project.STARTDATE_PROJECT %>
+        </div>
+
+        <div>
+            <%= f.label :ENDDATE_PROJECT%>
+            <%= select_date 10.days.from_now, prefix: :start_date%>
+        </div>
+
+        <div>
+            <%= f.label :STATE_PROJECT%>
+            <%= f.text_field :STATE_PROJECT%>
+        </div>
+
+        <p>
+            <%= f.submit :Submit, class: 'btn btn-success'%>
+        </p>
+
+    <% end %>
+</div>
